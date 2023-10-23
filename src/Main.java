@@ -8,10 +8,14 @@ public class Main {
         int numero = scanner.nextInt();
         System.out.println("Introduce una cadena de texto: ");
         String cadena = scanner.next();
+        System.out.println("Número: " + numero + " || Texto: " + cadena);
 
         // ver cuantas mayusculas tiene la cadena.
         int cantidadMayusculas= 0;
         for (int i = 0; i < cadena.length(); ++i){
+            if (Character.isUpperCase(cadena.charAt(i))){
+                cantidadMayusculas++;
+            }
         if (Character.isUpperCase(cadena.charAt(i))){
             cantidadMayusculas++;
         }
@@ -21,6 +25,7 @@ public class Main {
         System.out.println("Escribe un texto para ver si es palíndromo");
         System.out.print("> ");
         String textPal = scanner.next();
+        scanner.nextLine();
         sc.nextLine();
         String textReverse = "";
         for(int i = textPal.length() - 1; i >= 0; i--){
@@ -50,12 +55,11 @@ public class Main {
         }
 
         // Mostrar el tamaño de la cadena.
-        System.out.println("Meteme una cadena: ");
-        String cadena = scanner.next();
-        scanner.nextLine();
-        System.out.println("La longitud es: " + cadena.length());
-          
-         scanner.close();
+        System.out.println("Méteme una cadena: ");
+        scanner.useDelimiter("\n");
+        String textToLength = scanner.nextLine();
+        System.out.println("La longitud es: " + textToLength.length());
+        scanner.close();
     }
     
 }
