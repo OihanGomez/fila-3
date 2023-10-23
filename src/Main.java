@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce un numero positivo: ");
@@ -51,5 +50,12 @@ public class Main {
         }
 
         // Mostrar el tamaño de la cadena.
+        System.out.println("Meteme una cadena: ");
+        String cadena = scanner.next();
+        scanner.nextLine();
+        System.out.println("La longitud es: " + cadena.length());
+          
+         scanner.close();
     }
+    
 }
