@@ -16,6 +16,8 @@ public class Main {
             if (Character.isUpperCase(cadena.charAt(i))){
                 cantidadMayusculas++;
             }
+        if (Character.isUpperCase(cadena.charAt(i))){
+            cantidadMayusculas++;
         }
         System.out.println("La cadena de texto "+cadena+" tiene un total de "+cantidadMayusculas+" mayusculas.");
 
@@ -24,6 +26,7 @@ public class Main {
         System.out.print("> ");
         String textPal = scanner.next();
         scanner.nextLine();
+        sc.nextLine();
         String textReverse = "";
         for(int i = textPal.length() - 1; i >= 0; i--){
             textReverse += textPal.charAt(i);
